@@ -29,18 +29,9 @@ p {
   color: #26a69a;
 }
 
-.me-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-  .me-container .section {
-    width: 100%;
-  }
 
 @media only screen and (max-width : 992px) {
-  .me-container .section {
+  .section {
     position: absolute;
     top: 40%;
   }
@@ -60,6 +51,10 @@ p {
 }
 .icon-block .material-icons {
   font-size: inherit;
+}
+
+.material-icons, .icon-text {
+      vertical-align: middle;
 }
 
 footer.page-footer {
