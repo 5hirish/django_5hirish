@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 
 def view_resume(requests):
-    return render(requests, 'base.html', {})
+    return render(requests, 'resume.html', {})
