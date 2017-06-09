@@ -5,7 +5,8 @@
 
 {% block body %}
 
-    <div id="index-banner" class="card light-blue">
+<div class="row">
+        <div id="index-banner" class="card light-blue">
         <div class="no-pad-bot card-content">
             <div class="container">
                 <div class="row valign-wrapper">
@@ -19,15 +20,15 @@
                             <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons">phone</i> +91 7588203570</a></li>
                             <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons">room</i> Nashik, Maharashtra</a></li>
                         </ul>
-                        <a href=""><img src="{% get_static_prefix %}img/twitter.png"></a>
-                        <a href=""><img src="{% get_static_prefix %}img/github.png"></a>
-                        <a href=""><img src="{% get_static_prefix %}img/linkedin.png"></a>
+                        <a href=""><img src="{% get_static_prefix %}img/twitter.png" class="circle z-depth-1"></a>
+                        <a href=""><img src="{% get_static_prefix %}img/github.png" class="circle z-depth-1"></a>
+                        <a href=""><img src="{% get_static_prefix %}img/linkedin.png" class="circle z-depth-1"></a>
 
                         <!-- https://www.iconfinder.com/iconsets/capsocial-round -->
                     </div>
 
                     <div class="col s4">
-                        <img src="{% get_static_prefix %}img/5hirish_profile.jpg" alt="" class="circle responsive-img">
+                        <img src="{% get_static_prefix %}img/5hirish_profile.jpg" alt="" class="circle responsive-img z-depth-3">
                     </div>
                 </div>
             </div>
@@ -36,6 +37,18 @@
               <a href="#" class="white-text">Contact Me</a>
         </div>-->
     </div>
+</div>
+<div class="row">
+    <div class="col s2"></div>
+    <div class="col s8">
+        <div class="card-panel teal">
+            <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+            </span>
+        </div>
+    </div>
+    <div class="col s2"></div>
+</div>
 
 
 {% endblock %}

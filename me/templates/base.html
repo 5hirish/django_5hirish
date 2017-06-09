@@ -17,7 +17,7 @@
 
 </head>
 <body>
-
+<main>
     <nav class="white" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="#!" class="brand-logo">5hirish</a>
@@ -35,15 +35,16 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div class="section">
+    <br>
+
+    <div id="resume" class="container">
 
             {% block body%}
 
             {% endblock %}
-        </div>
     </div>
 
+</main>
 
     <footer class="page-footer">
           <div class="container">
@@ -55,9 +56,9 @@
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Join Me</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Github</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">LinkedIn</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><img src="{% get_static_prefix %}img/github.png"> Github</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><img src="{% get_static_prefix %}img/linkedin.png"> LinkedIn</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><img src="{% get_static_prefix %}img/twitter.png"> Twitter</a></li>
                 </ul>
               </div>
             </div>
