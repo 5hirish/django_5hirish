@@ -25,6 +25,10 @@ p {
   line-height: 2rem;
 }
 
+p.intro{
+    line-height: 50%;
+}
+
 .button-collapse {
   color: #26a69a;
 }
@@ -53,7 +57,7 @@ p {
 }
 
 .material-icons, .icon-text {
-      vertical-align: middle;
+    vertical-align: middle;
 }
 
 footer.page-footer {
