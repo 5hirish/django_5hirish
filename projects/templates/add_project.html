@@ -31,22 +31,30 @@
                         <label for="title">Title</label>
                     </div>
                     <div class="input-field col s6">
-                         <input id="date_from" type="date" class="datepicker" required>
-                        <label for="date_from">From</label>
+                        <input id="date_from" type="date" class="datepicker" required>
+                        <label for="date_from"></label>
                     </div>
                     <div class="input-field col s6">
-                         <input id="date_to" type="date" class="datepicker" required>
-                        <label for="date_to">To</label>
+                        <input id="date_to" type="date" class="datepicker">
+                        <label for="date_to"></label>
                     </div>
                     <div class="input-field col s12">
-                        <input id="file_name" type="text" class="validate" required>
+                        <input id="file_name" type="text" class="validate">
                         <label for="file_name">File Name</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="url_link" type="url" class="validate">
+                        <label for="url_link">URL</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="tech" type="text" class="validate" required>
+                        <label for="tech">Technologies (Separated by a comma)</label>
                     </div>
                     <div class="input-field col s12">
                         <textarea id="description" class="materialize-textarea"></textarea>
                         <label for="description">Description</label>
                     </div>
-                    <button class="btn waves-effect waves-light col s2 offset-s10" type="submit" name="action">Add
+                    <button class="btn waves-effect waves-light col s2 offset-s10" type="submit" name="add_project">Add
                         <i class="material-icons right">send</i>
                     </button>
                 </div>
