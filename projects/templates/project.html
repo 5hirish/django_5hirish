@@ -6,53 +6,39 @@
 {% block body %}
 
 <div class="row">
-    <div class="col s6">
+    <div class="col s12">
         <div class="card">
             <div class="card-image">
-                <img src="http://lorempixel.com/580/250/nature/2">
-                <span class="card-title">Project Title</span>
+                <img src="{% get_static_prefix %}img/project/proj_0.jpg" class="materialboxed responsive-img">
             </div>
             <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+                <span class="card-title"><b>Project Title</b></span>
+                <h6><i class="material-icons">date_range</i> (Jun 2015 - Mar 2017)</h6><br>
+                <p>I'm trying to display some large images with HTML img tags. At the moment they go off the edge of the screen;
+                    how can I scale them to stay within the browser window?
+                    Or in the likely event that this is not possible, is it possible to at least say "display this image
+                    at 50% of its normal width and height"?<br>
+                    The width and height attributes distort the image -- as far as I can tell, this is because they refer
+                    to whatever attributes the container may end up with, which will be unrelated to the image.
+                    I can't specify pixels because I have to deal with a large collection of images each with a different pixel size.
+                    Max-width doesn't work.</p>
+                <br>
+                <h6><i class="material-icons">settings</i> Technologies</h6><br>
+                <div class="chip hoverable z-depth-1"><i class="material-icons">assessment</i> Firebase, AdMob, Analytics</div>
+                <div class="chip hoverable z-depth-1"><i class="material-icons">devices</i> Java</div>
+                <div class="chip hoverable z-depth-1"><i class="material-icons">code</i> Python 3</div>
+                <div class="chip hoverable z-depth-1"><i class="material-icons">save</i> SQLite</div>
+                <div class="chip hoverable z-depth-1"><i class="material-icons">storage</i> MySQL</div>
+                <div class="chip hoverable z-depth-1"><i class="material-icons">format_align_right</i> JSON / XML</div>
+                <div class="chip hoverable z-depth-1"><i class="material-icons">laptop</i> C / C++</div>
+                <div class="chip hoverable z-depth-1"><i class="material-icons">chat</i> Natural Langugae Processing</div>
             </div>
             <div class="card-action">
-                <a href="1/">View Details</a>
-                <a href="#">View Project</a>
+                <a href="#"><i class="material-icons">public</i> View Project</a>
             </div>
         </div>
     </div>
-    <div class="col s6">
-        <div class="card">
-            <div class="card-image">
-                <img src="http://lorempixel.com/580/250/nature/3">
-                <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-                <a href="#">This is a link</a>
-            </div>
-        </div>
-    </div>
-        <div class="col s6">
-        <div class="card">
-            <div class="card-image">
-                <img src="http://lorempixel.com/580/250/nature/4">
-                <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-                <a href="#">This is a link</a>
-            </div>
-        </div>
-    </div>
-    <div class="col s6">
+    <div class="col s12">
         <div class="card">
             <div class="card-image">
                 <img src="http://lorempixel.com/580/250/nature/3">
