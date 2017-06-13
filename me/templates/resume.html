@@ -279,31 +279,31 @@
         <div class="slider">
             <ul class="slides">
                 <li>
-                    <img src="{% get_static_prefix %}img/achi_1.jpg">
+                    <img class="slider-img" src="{% get_static_prefix %}img/achi_1.jpg">
                     <div class="caption left-align">
                         <h3>Smart India Hackathon 2017</h3>
                         <h5 class="light grey-text text-lighten-3">Grand Finalist -	36 hour nonstop programming	competition.</h5>
                     </div>
                 </li>
                 <li>
-                    <img src="{% get_static_prefix %}img/achi_2.jpg">
-                    <div class="caption right-align">
+                    <img class="slider-img" src="{% get_static_prefix %}img/achi_2.jpg">
+                    <div class="caption left-align">
                         <h3>TCS	CodeVita Season V 2016</h3>
                         <h5 class="light grey-text text-lighten-3">TCS CodeVita 2016 Competitive Programming Rank 2023 (Top 5%)</h5>
                     </div>
                 </li>
                 <li>
-                    <img src="{% get_static_prefix %}img/achi_3.png">
+                    <img class="slider-img" src="{% get_static_prefix %}img/achi_3.png">
                     <div class="caption center-align">
-                        <h3>Published academic paper on Natural Language Processing</h3>
-                        <h5 class="light grey-text text-lighten-3">"A Cognitive	approach in	Question Answering System" - (IJECE)</h5>
+                        <h3 class="black-text">Published academic paper on Natural Language Processing</h3>
+                        <h5 class="black-text">"A Cognitive	approach in	Question Answering System" - (IJECE)</h5>
                     </div>
                 </li>
                 <li>
-                    <img src="{% get_static_prefix %}img/achi_4.png">
-                    <div class="caption center-align">
-                        <h3>GitHub Punch Card</h3>
-                        <h5 class="light grey-text text-lighten-3">35+ repositories	and	461+ contributions</h5>
+                    <img class="slider-img" src="{% get_static_prefix %}img/achi_4.png">
+                    <div class="caption right-align">
+                        <h3 class="black-text">GitHub Punch Card</h3>
+                        <h5 class="black-text">35+ repositories	and	461+ contributions</h5>
                     </div>
                 </li>
             </ul>
@@ -319,26 +319,27 @@
     <div class="col s2"></div>
     <div class="col s8">
         <div class="row">
-            <form class="col s12">
+            <form class="col s12" method="post" action="">
+                {% csrf_token %}
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>
-                        <input id="icon_prefix" type="text" class="validate" required>
-                        <label for="icon_prefix">Name</label>
+                        <input id="name" name="name" type="text" class="validate" required>
+                        <label for="name">Name</label>
                     </div>
                     <div class="input-field col s6">
                         <i class="material-icons prefix">email</i>
-                        <input id="icon_telephone" type="email" class="validate" required>
-                        <label for="icon_telephone">Email Address</label>
+                        <input id="email" name="email" type="email" class="validate" required>
+                        <label for="email">Email Address</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">edit</i>
-                        <input id="icon_prefix" type="text" class="validate" required>
-                        <label for="icon_prefix">Subject</label>
+                        <input id="subject" name="subject" type="text" class="validate" required>
+                        <label for="subject">Subject</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">sms</i>
-                        <textarea id="message" class="materialize-textarea"></textarea>
+                        <textarea id="message" name="message" class="materialize-textarea"></textarea>
                         <label for="message">Your Message</label>
                     </div>
                     <button class="btn waves-effect waves-light col s2 offset-s10" type="submit" name="action">Send
