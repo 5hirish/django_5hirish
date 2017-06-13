@@ -353,6 +353,19 @@
 </div>
 
 
+<!------------- Message Response ----------------->
+
+
+{% if status_code == 200 %}
+    <blockquote>
+        Hi, {{ con_name }}. Thank you for getting in touch, I will reply as soon as possible.<br>
+        - Shirsh Kadam
+    </blockquote>
+{% endif %}
+
+
+
+
 <script src="{% get_static_prefix %}js/init.js"></script>
 
 {% endblock %}
