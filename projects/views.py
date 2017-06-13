@@ -9,3 +9,7 @@ def view_project(requests):
 
 def project_detail(requests):
     return render(requests, 'detail_project.html', {})
+
+
+def add_project(requests):
+    return render(requests, 'add_project.html', {})
