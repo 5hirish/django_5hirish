@@ -33,6 +33,20 @@ p.intro{
   color: #26a69a;
 }
 
+h3.card-subtitle {
+  font-size: 25px;
+  margin-bottom: 0;
+  color: #303F9F;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-content h4 {
+  font-size: 14px;
+  margin-top: 0;
+  color: #FF5252;
+  font-family: 'Montserrat', sans-serif;
+}
+
 img.slider-img {
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
