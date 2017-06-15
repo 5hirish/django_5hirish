@@ -1,11 +1,14 @@
 from django.shortcuts import render
 from .models import AddProject
-import time, datetime
+import datetime
 # Create your views here.
 
 
 def view_project(requests):
-    return render(requests, 'project.html', {})
+
+    projects = AddProject.objects.all()
+
+    return render(requests, 'project.html', {'projects': projects})
 
 
 def project_detail(requests):
