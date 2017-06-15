@@ -6,7 +6,7 @@ import datetime
 class AddProject(models.Model):
 
     default_link = "https://github.com/5hirish"
-    default_file = "proj_0.jpg"
+    default_file = "proj_0.png"
 
     project_id = models.AutoField(primary_key=True, db_column='pId')
     project_title = models.CharField(max_length=120, null=False, db_column='Title')
