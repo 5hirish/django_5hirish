@@ -47,11 +47,6 @@ h3.card-subtitle {
   font-family: 'Montserrat', sans-serif;
 }
 
-img.slider-img {
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-}
-
 @media only screen and (max-width : 992px) {
   .section {
     position: absolute;
