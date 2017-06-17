@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from .views import home_index
+from .views import home_index, download_resume
 
 urlpatterns = [
 
@@ -26,6 +26,7 @@ urlpatterns = [
 
     url(r'^me/', include('me.urls'), name='me'),
     url(r'^projects/', include('projects.urls'), name='projects'),
-    url(r'^blog/', include('blog.urls'), name='blog')
+    url(r'^blog/', include('blog.urls'), name='blog'),
+    url(r'^resume/download', download_resume, name='resume')
 
 ]
