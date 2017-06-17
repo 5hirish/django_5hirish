@@ -14,7 +14,11 @@
             </div>
             <div class="card-content">
                 <span class="card-title"><b>{{ project.project_title }}</b></span>
-                <h6><i class="material-icons">date_range</i> ({{ project.project_start }} - {{ project.project_end }})</h6><br>
+                {% if project.project_current == 1 %}
+                    <h6><i class="material-icons">date_range</i> ({{ project.project_start }} - Present)</h6><br>
+                {% else %}
+                    <h6><i class="material-icons">date_range</i> ({{ project.project_start }} - {{ project.project_end }})</h6><br>
+                {% endif %}
                 <p> {{ project.project_description }} </p>
                 <br>
                 <div class="divider" style="margin-bottom: 10px"></div>
