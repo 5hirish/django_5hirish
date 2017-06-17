@@ -15,27 +15,29 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="{% get_static_prefix %}css/materialize.min.css" media="screen,projection"/>
     <link href="{% get_static_prefix %}css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{% get_static_prefix %}css/palette.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
 
     <title>Shirish Kadam</title>
 
 </head>
 <body>
 <main>
-    <nav class="white" role="navigation">
+    <nav class="default-primary-color" role="navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="/" class="brand-logo">5hirish</a>
+            <a id="logo-container" href="/" class="brand-logo white-text">5hirish</a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="https://shirishkadam.com/" target="_blank">Blog</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a class="waves-effect waves-light btn" href="/resume/download">Resume<i class="material-icons right">file_download</i></a></li>
+                <li><a href="https://shirishkadam.com/" target="_blank" class="white-text">Blog</a></li>
+                <li><a href="/projects" class="white-text">Projects</a></li>
+                <li><a class="waves-effect waves-light btn accent-color" href="/resume/download">Resume<i class="material-icons right">file_download</i></a></li>
             </ul>
-            <ul class="side-nav" id="nav-mobile">
-                <li><a href="">5hirish</a></li>
-                <li><a href="https://shirishkadam.com/" target="_blank">Blog</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a class="waves-effect waves-light btn" href="/resume/download">Resume<i class="material-icons right">file_download</i></a></li>
+            <ul class="side-nav default-primary-color" id="nav-mobile">
+                <li><a href="" class="white-text">5hirish</a></li>
+                <li><a href="https://shirishkadam.com/" target="_blank" class="white-text">Blog</a></li>
+                <li><a href="/projects" class="white-text">Projects</a></li>
+                <li><a class="waves-effect waves-light btn accent-color" href="/resume/download">Resume<i class="material-icons right">file_download</i></a></li>
             </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons white-text">menu</i></a>
         </div>
     </nav>
 
@@ -50,7 +52,7 @@
 
 </main>
 
-<footer class="page-footer">
+<footer class="page-footer default-primary-color">
     <div class="container">
         <div class="row">
             <div class="col l6 m12 s12">
