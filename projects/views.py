@@ -43,8 +43,6 @@ def add_project(request):
         pro_tech = request.POST.get("tech", "")
         pro_descp = request.POST.get("description", "")
 
-        print(type(pro_current), pro_current)
-
         project = AddProject(project_title=pro_title, project_start=pro_from, project_current=pro_current, project_end=pro_to,
                              project_file=pro_file, project_url=pro_link, project_tech=pro_tech, project_description=pro_descp)
         project.save()
