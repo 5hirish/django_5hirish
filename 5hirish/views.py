@@ -12,7 +12,7 @@ def home_index(request):
 
 
 def download_resume(request):
-    file_name = 'Shirish_Sharad_Kadam_Android_2.pdf'
+    file_name = 'Shirish_Sharad_Kadam_Android_0.pdf'
     file_path = os.path.join(settings.BASE_DIR, 'static/files/'+file_name)
     if os.path.exists(file_path):
         with open(file_path, 'rb') as fh:
