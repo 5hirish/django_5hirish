@@ -1,0 +1,95 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="shortcut icon" href="{% get_static_prefix %}img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{% get_static_prefix %}img/favicon.ico" type="image/x-icon">
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{% get_static_prefix %}css/materialize.min.css" media="screen,projection"/>
+    <link href="{% get_static_prefix %}css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+    <title>Shirish Kadam</title>
+
+</head>
+<body>
+
+<a href="/"> <h4 class="center">Edit Project</h4></a>
+<div class="row">
+    <div class="col s12 m12 l2"></div>
+    <div class="col s12 m12 l8">
+        {% for project in projects %}
+        <div class="row">
+            <form class="col s12" method="post" action="">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="title" name="title" type="text" class="validate" value="{{ project.project_title }}" required>
+                        <label for="title">Title</label>
+                    </div>
+                    <div class="input-field col s12 m12 l6">
+                        <input id="date_from" name="date_from" type="date" class="datepicker" required>
+                        <label for="date_from">Started From</label>
+                    </div>
+                    <div class="input-field col s12 m12 l6">
+                        <input id="date_to" name="date_to" type="date" class="datepicker">
+                        <label for="date_to">Till Completion</label>
+                    </div>
+                    <p class="col s12 m12 l6">Currently in Development : </p>
+                    <div class="switch col s12 m12 l6">
+                        <label>
+
+                            No
+                            {% if project.project_current == 1 %}
+                                <input type="checkbox" name="current" value="True" checked>
+                            {% else %}
+                                <input type="checkbox" name="current" value="False">
+                            {% endif %}
+
+                            <span class="lever"></span>
+                            Yes
+
+                        </label>
+                      </div>
+                    <div class="input-field col s12">
+                        <input id="file_name" name="file_name" type="text" value="{{ project.project_file }}" class="validate">
+                        <label for="file_name">File Name</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="url_link" name="url_link" type="url" value="{{ project.project_url }}" class="validate">
+                        <label for="url_link">URL</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="tech" type="text" name="tech" value="{{ project.project_tech }}" class="validate" required>
+                        <label for="tech">Technologies (Separated by a comma)</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <textarea id="description" name="description" class="materialize-textarea">{{ project.project_description }}</textarea>
+                        <label for="description">Description</label>
+                    </div>
+                    <button class="btn waves-effect waves-light col s6 offset-s6 m4 offset-m8 l2 offset-l10" type="submit" name="add_project">Add
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="col s12 m12 l2"></div>
+</div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="{% get_static_prefix %}js/materialize.min.js"></script>
+    <script src="{% get_static_prefix %}js/init.js"></script>
+    <script src="{% get_static_prefix %}js/google_analytics.js"></script>
+
+
+</body>
+</html>

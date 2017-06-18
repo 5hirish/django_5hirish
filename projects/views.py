@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
 from .models import AddProject
 import datetime
 # Create your views here.
@@ -48,3 +48,43 @@ def add_project(request):
         project.save()
 
         return render(request, 'add_project.html', {})
+
+
+def edit_project(request, pid=0):
+
+    projects = AddProject.objects.all().filter(project_id=pid)
+
+    if request.method == 'GET':
+        if len(projects) > 0:
+            return render(request, 'edit_project.html', {"projects": projects})
+        else:
+            return HttpResponseRedirect("/projects")
+
+    elif request.method == 'POST':
+        for project in projects:
+
+            date_from = datetime.datetime.strptime(request.POST.get("date_from", ""), "%d-%m-%Y").strftime('%Y-%m-%d')
+
+            if request.POST.get("date_to", "") == "":
+                date_to = datetime.date.today().strftime('%Y-%m-%d')
+            else:
+                date_to = datetime.datetime.strptime(request.POST.get("date_to", ""), "%d-%m-%Y").strftime('%Y-%m-%d')
+
+            pro_current_str = request.POST.get("current", "False")
+
+            if pro_current_str == "True":
+                project.project_current = True
+            else:
+                project.project_current = False
+
+            project.project_title = request.POST.get("title", "")
+            project.project_start = date_from
+            project.project_end = date_to
+            project.project_file = request.POST.get("file_name", "")
+            project.project_url = request.POST.get("url_link", "")
+            project.project_tech = request.POST.get("tech", "")
+            project.project_description = request.POST.get("description", "")
+
+            project.save()
+
+        return render(request, 'edit_project.html', {"projects": projects})

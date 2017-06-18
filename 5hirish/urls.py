@@ -27,6 +27,6 @@ urlpatterns = [
     url(r'^me/', include('me.urls'), name='me'),
     url(r'^projects/', include('projects.urls'), name='projects'),
     url(r'^blog/', include('blog.urls'), name='blog'),
-    url(r'^resume/download', download_resume, name='resume')
+    url(r'^resume/download$', download_resume, name='resume')
 
 ]
